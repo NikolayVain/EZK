@@ -1,0 +1,285 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.header {
+    background-color: #81C5FF;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+}
+
+
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.filters select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 5px solid #ccc;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.subject-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    margin-top: -380px;
+}
+
+.subject-window,
+.control-type-window {
+    background-color: #81C5FF; 
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.subject-window h2,
+.control-type-window h2 {
+    text-align: left; 
+    margin-bottom: 10px;
+}
+
+.data-table {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.data-table table {
+    width: auto;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #81C5FF;
+    color: white;
+}
+
+/* Стили для заметок */
+.data-table .notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Поле заметок */
+.note-window {
+    background-color: #81C5FF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.note-window h3 {
+    text-align: center;
+    margin-bottom: -40px;
+}
+
+.note-window textarea {
+    width: 100%;
+    height: 50px;
+    resize: none;
+    margin-top: 5px;
+}
+
+/* нижняя шапка ЛКП */
+.footer {
+    position: fixed;   /* Фиксирует элемент на месте */
+    left: 0;           /* Прижимаем к левому краю окна браузера */
+    bottom: 0;         
+    width: 100%;       /* Задаем футеру ширину 100% от окна браузера */
+    background-color: #81C5FF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    z-index: 1000;     /* Устанавливаем z-index, чтобы футер был поверх других элементов */
+  }
+  
+
+/* Добавляем стили для текстовых полей */
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    height: 100px;
+    text-align: center;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Добавлено */
+}
+
+.data-table td:first-child {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.data-table table {
+    border-collapse: collapse;
+    width: 100%; /* Чтобы таблица растягивалась на всю ширину */
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd; /* Линии сетки */
+    padding: 8px;
+    text-align: center; /* Центрирование текста */
+}
+
+.data-table th {
+    background-color: #81C5FF;
+    color: white;
+}
+
+
+button {
+    background-color: #e0f2fe; 
+    border: 1px solid #a1d8f0; /* Светло-голубая рамка */
+    border-radius: 10px; /* Закругление углов */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 25px; /* Размер шрифта */
+    
+    color: #000000; /* Цвет текста */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Слабая тень */
+    cursor: pointer; /* Курсор в виде пальца при наведении */
+    outline: none; /* Убираем фокусный контур в некоторых браузерах */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Плавное изменение фона и тени при наведении */
+  }
+  
+  button:hover {
+    background-color: #cce7f8; /* Чуть более темный оттенок при наведении */
+    box-shadow: 0 6px 12px rgba(255, 254, 254, 0.15); /* Увеличиваем тень при наведении */
+  }
+  
+  button:active {
+    background-color: #b3dbf2; /* Еще более темный оттенок при нажатии */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшаем тень при нажатии */
+  }
+  
+  .parent-container {
+    display: flex;
+    justify-content: flex-start; /* Выравнивание содержимого контейнера по левому краю */
+    margin-left: 50px; /* Отступ кнопки от левого края */
+  }
+  
+  .logout-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Вертикальное выравнивание содержимого контейнера в начале */
+    margin-left: 755px;
+  }
+  
+  .logout-container button {
+    position: relative;
+    top: -610px; /* Сдвигаем кнопку вверх */
+    color: #E4717A; /* Слегка красный цвет текста */
+    background-color:#C2E7FF;
+    border: 1px solid #a1d8f0; 
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    width: 130px;
+    
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between; /* Распределить пространство между элементами */
+    align-items: center; /* Центрировать элементы по вертикали */
+    margin-bottom: 20px; /* Добавить немного пространства снизу */
+  }
+  
+  .filters form {
+    display: flex;
+    width: 100%; 
+  }
+  
+  .filters label {
+    margin-right: 10px; /* Добавить пространство справа от текста */
+    font-size: 11px; 
+    white-space: nowrap; /* Удерживать текст в одной строке */
+  }
+  
+  .filters select {
+    border: 1px solid #ccc; /* Граница для селектора */
+    border-radius: 4px; /* Скругление углов для селектора */
+    padding: 5px 10px; 
+    margin-right: 20px; /* Отступ справа от селектора */
+    font-size: 16px; /* Размер текста внутри селектора */
+  }
+  
+  .filters button {
+    background-color: #e0f2fe; /* Голубой фон */
+    border: 1px solid #a1d8f0; /* Светло-голубая рамка */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    color: #000; /* Цвет текста */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Слабая тень */
+    
+  }
+  
+  /* Стили для кнопки при наведении */
+  .filters button:hover {
+    background-color: #cce7f8; /* Чуть более темный оттенок при наведении */
+  }
+  
+  /* Стили для кнопки при нажатии */
+  .filters button:active {
+    background-color: #b3dbf2; /* Еще более темный оттенок при нажатии */
+  }
+  
+  
+  
+
+
+
+.bg-FFE588 { background-color: #FFE588; }
+.bg-AFEEEE { background-color: #AFEEEE; }
+.bg-BADBAD { background-color: #BADBAD; }
+.bg-CCCCFF { background-color: #CCCCFF; }
+.bg-FFBCAD { background-color: #FFBCAD; }
+.bg-E4717A { background-color: #E4717A; }
+.bg-F5F5DC { background-color: #F5F5DC; }

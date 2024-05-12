@@ -1,0 +1,682 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 25px;
+  overflow: hidden; /* Чтобы скругленные углы работали правильно */
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 3px solid rgba(217, 217, 217, 0.35); 
+}
+
+th,
+td {
+  padding: 40px;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select {
+  border-radius: 200px;
+  padding: 5px;
+}
+
+.window {
+  position: relative;
+}
+
+/* Стили для контейнера */
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Промежуток между элементами */
+}
+
+/* Стили для окошек с фиксированной шириной */
+.fixed-width {
+  background-color: #aad4f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 25px;
+  width: 175px;
+  word-wrap: break-word; /* Перенос текста */
+  font-family: Roboto;
+  font-size: 20.9px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(249, 249, 249);
+}
+
+.fixed-width2 {
+  background-color: #aad4f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 25px;
+  width: 400px;
+  word-wrap: break-word;
+  font-family: Roboto;
+  font-size: 20.9px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(249, 249, 249);
+}
+
+/* Стили для окошек с изменяемой шириной */
+.flexible-width {
+  background-color: #81c5ff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 25px;
+  width: 400px;
+  height: auto;
+  font-family: Roboto;
+  font-size: 20.9px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(249, 249, 249);
+}
+
+/* Стили для заголовка */
+.student-info h2 {
+  white-space: nowrap; /* Запретить перенос текста */
+}
+
+/* Стили для параграфа */
+.student-info p {
+  white-space: normal; /* Разрешить перенос текста */
+}
+
+.student-info .info-item {
+  margin-left: 10px; /* Расстояние между изображением и текстом */
+  text-align: left; /* Выравнивание текста по правому краю */
+}
+
+#window-1 {
+  left: 50px;
+  top: 100px;
+  z-index: 1000;
+}
+
+.window-2 {
+  left: 1150px;
+  top: -20px;
+  z-index: 1000;
+}
+
+.info-pair {
+  display: flex;
+  gap: 20px; /* Промежуток между элементами в паре */
+}
+
+.info-item p {
+  display: block; /* Начинать каждый пункт с новой строки */
+}
+
+.inf {
+  position: absolute;
+  left: 1260px;
+  top: 90px;
+  background-color: #0483f3;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 15px;
+  width: 163px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: -20.9px;
+  font-weight: 50px;
+  line-height: 5px;
+  letter-spacing: 10%;
+  color: rgb(249, 249, 249);
+}
+
+.select-container {
+  margin-top: 20px; /* Отступ сверху */
+  border-radius: 10px; /* Скругление углов */
+  overflow: hidden; /* Скрыть часть контента, выходящего за пределы контейнера */
+  box-shadow: 0 0 10px rgba(250, 27, 27, 0.1); /* Тень */
+  display: inline-block; /* Установка блочного элемента с использованием инлайн-блока */
+  position: absolute; /* Позиционирование элемента абсолютно */
+  left: 60px; /* Отступ справа */
+  z-index: 999; /* Устанавливаем порядок наложения */
+}
+
+/* Стили для лейбла */
+label {
+  padding: 10px; /* Внутренний отступ */
+  background-color: #f2f2f2; /* Цвет фона */
+  border-right: 2px solid #ccc; /* Правая граница */
+}
+
+@media (max-width: 1700px) {
+  select {
+    position: relative;
+    margin-top: 0px;
+  }
+  #select {
+    padding-top: 0;
+  }
+  label::placeholder {
+    color: #999999;
+  }
+  .select-container {
+    margin-top: 90px !important;
+  }
+}
+
+/* Стили для выпадающего списка */
+select {
+  padding: 10px; /* Внутренний отступ */
+  background-color: #fff; /* Цвет фона */
+  border: none; /* Убираем границу */
+  width: 200px; /* Задаем фиксированную ширину */
+}
+
+.fio {
+  position: absolute;
+  left: 725px;
+  padding: 5px; /* Внутренний отступ */
+  background-color: #1b75db; 
+  border: none; /* Убираем границу */
+  width: 200px; 
+  border-radius: 15px;
+  white-space: nowrap;
+  width: auto;
+  height: 45px;
+  text-align: center; /* Выравнивание текста по центру */
+  overflow: hidden; /* Предотвращаем выход текста за границы блока */
+  margin-top: -20px;
+  font-family: Roboto;
+  font-size: -20.9px;
+  font-weight: 50px;
+  line-height: 5px;
+  letter-spacing: 10%;
+  color: rgb(249, 249, 249);
+  top: 112px;
+}
+
+.header {
+  background-color: #8fbdf3; /* Цвет фона */
+  height: 70px; /* Высота шапки */
+  width: 1950px; /* Ширина шапки */
+  position: absolute; /* Фиксированное положение */
+  top: 0; /* Отступ сверху */
+  left: 0; /* Отступ слева */
+}
+
+.LKS {
+  position: absolute;
+  left: 60px;
+  width: auto;
+  height: 45px;
+  margin-top: -20px;
+  font-family: Roboto;
+  font-size: -20.9px;
+  font-weight: 50px;
+  line-height: 5px;
+  letter-spacing: 10%;
+  color: rgb(247, 243, 243);
+  top: 35px;
+  z-index: 1000;
+}
+
+.footer {
+  background-color: #8fbdf3; /* Цвет фона */
+  height: 50px; /* Высота шапки */
+  width: 1950px; /* Ширина шапки */
+  position: absolute; /* Фиксированное положение */
+  bottom: 0; /* Отступ снизу */
+  left: 0; /* Отступ слева */
+}
+
+@media (max-width: 1700px) {
+  .footer {
+    background-color: #f5d6d1; /* Цвет фона */
+    height: 1px; /* Высота шапки */
+    width: 1px; /* Ширина шапки */
+    position: absolute; /* Фиксированное положение */
+    bottom: 0; /* Отступ снизу */
+    left: 0; /* Отступ слева */
+  }
+}
+
+@media (max-width: 1700px) {
+  #window-1 {
+    width: 380px; /* Уменьшаем ширину окна */
+    height: 700px;
+    overflow: hidden; /* чтобы окно не выходило за границы */
+    line-height: 1;
+  }
+
+  #window-1 table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #window-1 th {
+    display: flex;
+    justify-content: space-between; /* равномерное распределение между элементами в строке */
+    line-height: 0.2; /* уменьшаем расстояние между строками */
+  }
+
+  #window-1 th:last-child {
+    justify-content: flex-end; /* выравнивание заголовка "Оценка" вправо */
+  }
+
+  thead {
+    background-color: #b8e5f7;
+    width: auto; /* Ширина шапки */
+    height: auto; /* Высота шапки */
+  }
+
+  th,
+  td {
+    padding: 10px; 
+  }
+
+  table {
+    width: auto;
+    max-width: 100%; 
+  }
+
+  .window {
+    display: inline-block; 
+  }
+
+  th,
+  td {
+    padding: 10px;
+    color: rgb(8, 2, 2);
+    font-family: Roboto;
+  }
+}
+
+.mode-switch {
+  visibility: hidden;
+}
+
+@media (min-width: 1701px) {
+  /*  стили CSS для экранов шириной более 1700px здесь */
+
+  .logoezk-image {
+    position: absolute;
+    width: 110.19px;
+    height: 99px;
+    left: 1435.96px;
+    right: 1415.57px;
+    top: 80px;
+    bottom: 913.34px;
+    background: url('../img/Group 29.png') no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1700px) {
+  .mode-switch {
+    visibility: visible;
+    position: absolute;
+    left: 0px;
+    width: 500px;
+    height: 45px;
+    margin-top: -20px;
+    font-family: Roboto;
+    font-size: -20.9px;
+    font-weight: 50px;
+    line-height: 30px;
+    letter-spacing: 40px;
+    color: rgb(247, 243, 243);
+    top: 100px;
+    z-index: 1000;
+    border-radius: 50px; /* Сделать кнопки округлыми */
+    padding: 5px 65px; /* Подобрать отступы для кнопок */
+  }
+
+  .mode-switch button {
+    border-radius: 20px; /* Задаем радиус скругления углов для кнопок */
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #dedede;
+    background-color: transparent;
+
+    /* Размер текста кнопок */
+  }
+  .mode-switch button:active {
+    background-color: #1ebde5; /* Цвет фона при нажатии на кнопку */
+    color: white; /* Цвет текста при нажатии на кнопку */
+  }
+}
+
+@media (max-width: 1700px) {
+  .h1-one {
+    display: none;
+  }
+}
+
+@media (max-width: 1700px) {
+  .window {
+    position: absolute;
+    top: 100px;
+    z-index: 1000;
+    left: 35px;
+  }
+  #window-2 {
+    left: 35px;
+    top: 80px;
+    z-index: 1000;
+    opacity: 0;
+  }
+
+  #window-1 {
+    top: 35px;
+    left: 80px; 
+  }
+
+  .fio {
+    position: absolute;
+    left: 60px;
+    height: 20px;
+    padding: 5px; /* Внутренний отступ */
+    background-color: #8fbdf3; /* Цвет фона */
+    border: none; 
+    width: 150px; /* Задаем фиксированную ширину */
+    border-radius: 10px;
+    white-space: nowrap;
+    width: auto;
+    text-align: center; /* Выравнивание текста по центру */
+    overflow: hidden; 
+    margin-top: -20px;
+    font-family: Roboto;
+    font-size: -20.9px;
+    font-weight: 50px;
+    line-height: 5px;
+    letter-spacing: 10%;
+    color: rgb(249, 249, 249);
+    top: 60px;
+    font-size: 10px;
+  }
+
+  .LKS {
+    position: absolute;
+    left: 60px;
+    width: auto;
+    height: 45px;
+    margin-top: -20px;
+    font-family: Roboto;
+    font-size: -10.9px;
+    font-weight: 50px;
+    line-height: 5px;
+    letter-spacing: 10%;
+    color: rgb(247, 243, 243);
+    top: 20px;
+    z-index: 1000;
+  }
+
+  .inf {
+    display: none; /* Скрыть элемент в адаптивном режиме */
+  }
+
+  .logoezk-image {
+    position: absolute;
+    width: 55.19px;
+    height: 47px;
+    left: 195.96px;
+    right: 1415.57px;
+    bottom: 913.34px;
+    background: url('../img/Group 29.png') no-repeat;
+    background-size: cover;
+  }
+
+  .select-container {
+    width: auto;
+    margin-top: 70px; /* Отступ сверху */
+    border-radius: 10px; /* Скругление углов */
+    overflow: hidden; /* Скрыть часть контента, выходящего за пределы контейнера */
+    box-shadow: 0 0 10px rgba(250, 27, 27, 0.1); /* Тень */
+    display: inline-block; /* Установка блочного элемента с использованием инлайн-блока */
+    position: absolute; /* Позиционирование элемента абсолютно */
+    left: 60px; /* Отступ справа */
+    z-index: 999; /* Устанавливаем порядок наложения */
+  }
+  /* шакпка*/
+  .header {
+    background-color: #8fbdf3; 
+    height: 70px; /* Высота шапки */
+    width: 480px; /* Ширина шапки */
+
+    position: absolute; /* Фиксированное положение */
+    top: 0; /* Отступ сверху */
+    left: 0px; /* Отступ слева */
+  }
+
+  /* блоки с информацией */
+  .fixed-width {
+    background-color: #aad4f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+    width: 145px; /* Фиксированная ширина */
+    word-wrap: break-word; /* Перенос текста */
+    font-family: Roboto;
+    font-size: 15.9px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgb(249, 249, 249);
+  }
+
+  .fixed-width2 {
+    background-color: #aad4f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+    width: 340px; /* Фиксированная ширина */
+    word-wrap: break-word; /* Перенос текста */
+    font-family: Roboto;
+    font-size: 15.9px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgb(249, 249, 249);
+  }
+
+  /* Стили для окошек с изменяемой шириной */
+  .flexible-width {
+    background-color: #81c5ff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+    width: 340px;
+    height: auto;
+    font-family: Roboto;
+    font-size: 15.9px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgb(249, 249, 249);
+  }
+}
+
+@media (min-width: 1700px) {
+}
+
+/* Общие стили */
+.window {
+  position: absolute;
+  top: 100px;
+  z-index: 1000;
+}
+
+#window-1 {
+  top: 200px;
+  left: 50px; 
+}
+
+#window-2 {
+  top: 220px;
+  left: 1250px; 
+}
+
+.logoezk-image {
+  position: absolute;
+  width: 110.19px;
+  height: 94px;
+  left: 1530.96px;
+  right: 1415.57px;
+  top: 80px;
+  bottom: 913.34px;
+  background: url('../img/Group 29.png') no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1700px) {
+
+}
+
+/* Стили для кнопки "Выход" */
+.logout-container button {
+  border-radius: 15px; /* Сделать кнопку круглой */
+  background-color: #a7d3fa; 
+  color: rgb(228, 113, 122); 
+  padding: 10px 20px; /* Задать отступы для кнопки */
+  border: none; /* Убрать границу кнопки */
+  cursor: pointer; /* Задать указатель при наведении */
+  margin-top: 10px; 
+  margin-left: 55px; 
+  width: 375px; /* Растянуть кнопку по ширине */
+  font-weight: bold;
+}
+
+@media (max-width: 1700px) {
+  .logout-container button {
+    position: absolute;
+    top: 550px;
+    margin-left: 75px;
+    border: none; /* Убрать границу кнопки */
+  cursor: pointer; /* Задать указатель при наведении */
+  margin-top: 70px; /* Сдвиг кнопки вниз на 10 пикселей */
+  margin-left: 55px; /* Сдвиг кнопки вправо на 10 пикселей */
+  width: 350px; /* Растянуть кнопку по ширине */
+  font-weight: bold;
+  }
+
+}
+
+.logout-container button:hover {
+  background-color: #7eadf5; /* Изменение цвета кнопки при наведении */
+}
+
+@media (max-width: 1700px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .table-headers {
+    max-height: 395px;
+    overflow: auto;
+    display: none;
+  }
+
+}
+
+@media (max-width: 1700px) {
+    #window-1 .table-headers th {
+      display: none;
+    }
+  }
+  
+
+  @media (max-width: 1700px) {
+    .table-headers tr:nth-child(odd) {
+      background-color: #f2f2f2; /* светлый фон для нечетных строк */
+    }
+    .table-headers tr:nth-child(even) {
+      background-color: #e1e1e1; /* чуть темнее фон для четных строк */
+    }
+  }
+
+  @media (max-width: 1700px) {
+    .table-headers td {
+      border-bottom: 1px solid #ccc; /* добавляем горизонтальные линии между ячейками */
+      padding: 10px; /* увеличиваем отступы в ячейках */
+    }
+  }
+  
+  @media (max-width: 1700px) {
+    .table-headers td {
+      border-bottom: 1px solid #ccc; /* поддерживаем горизонтальную линию между ячейками */
+      padding: 5px 10px; /* уменьшаем вертикальный отступ, сохраняем горизонтальный */
+    }
+    .table-headers tr {
+      margin-bottom: -5px; /* отрицательный маржин может быть использован для сближения строк */
+    }
+  }
+  
+  @media (max-width: 1700px) {
+    .table-headers tr {
+      font-weight: normal; /* Устанавливаем нормальный вес шрифта для всех строк */
+    }
+    .table-headers tr:nth-of-type(2n+2) {
+      font-weight: bold; /* Делает жирным каждую пятую строку начиная с первой */
+    }
+  }
+  
+  #table-headers tr:nth-child(2n)::before {
+      content: "Название дисциплины ";
+      display: block;
+      font-weight: bold;
+      text-align: left;
+      padding: 10px;
+      background-color: #ddd; /* фон, чтобы отличался от остальных данных */
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    @media (max-width: 1700px) {
+        .table-headers td::before {
+          display: block;
+          font-weight: bold;
+        }
+        .table-headers td.discipline::before {
+          content: "Название дисциплины";
+        }
+        .table-headers td.control-type::before {
+          content: "Вид контроля";
+        }
+        .table-headers td.date::before {
+          content: "Дата аттестации";
+        }
+        .table-headers td.teacher::before {
+          content: "Преподаватель";
+        }
+        .table-headers td.grade::before {
+          content: "Оценка";
+        }
+      }
+      
+  
+  
+
+

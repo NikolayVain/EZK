@@ -1,0 +1,338 @@
+body {
+    background: #FFFFFF; 
+}
+
+.background-image {
+    position: absolute;
+    width: 639px;
+    height: 1350px;
+    left: 1036px;
+    top: 0px;
+    background: url('../img/fon.png') no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    #background-image-1 {
+        width: 1500px; /* Изменяем ширину при необходимости */
+        left: 400px; /* Центрируем по горизонтали */
+        top: 0px; /* Позиционируем относительно верхнего края */
+        transform: translate(-50%, 0); /* Смещаем на 50% от ширины и 0 по вертикали */
+        height: 300px;
+    }
+    #background-image-2 {
+        width: 250%; /* Изменяем ширину при необходимости */
+        left: 0px; /* Центрируем по горизонтали */
+        top: 1200px; /* Позиционируем относительно верхнего края */
+        transform: translate(-50%, 0); /* Смещаем на 50% от ширины и 0 по вертикали */
+        height: 300px;
+    }
+}
+
+.foreground-image {
+    position: absolute;
+    width: 627px;
+    height: 752px;
+    left: 1024px;
+    top: 133px;
+    bottom: 350px;
+    background: url('../img/acetone-202424-18420-857 2.png') no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    .foreground-image {
+        position: absolute;
+        width: 180px;
+        height: 225px;
+        left: 350px;
+        top: 50px;
+        bottom: 350px;
+        background: url('../img/acetone-202424-18420-857 2.png') no-repeat;
+        background-size: cover;
+        z-index: 2;
+    }
+}
+
+.logovuz-image {
+    position: absolute;
+    width: 313.04px;
+    height: 184px;
+    left: 541px;
+    right: 882.68px;
+    top: 62px;
+    bottom: 846.03px;
+    background: url('../img/snapedit_1706969385932 1.png') no-repeat;
+    background-size: cover;
+    transform: translateY(0%);;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .logovuz-image {
+        width: 400px; /* Изменяем ширину при необходимости */
+        left: 650px; /* Центрируем по горизонтали */
+        top: 962px; /* Позиционируем относительно верхнего края */
+        transform: translate(-80%, 0); /* Смещаем на 50% от ширины и 0 по вертикали */
+        position: absolute;
+        width: 300.04px;
+        height: 180px;
+    
+    }
+}
+
+
+.logoezk-image {
+    position: absolute;
+    width: 240.19px;
+    height: 184px;
+    left: 135.96px;
+    right: 1415.57px;
+    top: 62px;
+    bottom: 913.34px;
+    background: url('../img/Group 29.png') no-repeat;
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .logoezk-image {
+        position: absolute;
+        width: 240.19px;
+        height: 184px;
+        left: 135.96px;
+        right: 1415.57px;
+        top: 962px;
+        bottom: 913.34px;
+        background: url('../img/Group 29.png') no-repeat;
+        background-size: cover;
+    }
+}
+.container {
+    position: relative;
+}
+.login-container {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 100px;
+    border-radius: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    top: 700px;
+    left: 400px;
+    transform: translate(-42.5%, -50%);
+    
+}
+
+@media (max-width: 1200px) {
+    .login-container {
+        width: 400px; /* Изменяем ширину при необходимости */
+        left: 400px; /* Центрируем по горизонтали */
+        top: 300px; /* Позиционируем относительно верхнего края */
+        transform: translate(-50%, 0); /* Смещаем на 50% от ширины и 0 по вертикали */
+
+    }
+}
+
+.login-container h2 {
+    margin-bottom: 20px; /* Добавляем отступ снизу для заголовка */
+}
+
+.login-container form div {
+    margin-bottom: 15px; /* Добавляем отступ между элементами формы */
+}
+
+.info-tooltip{
+    display: none;
+    position: absolute;
+    top: -50px; /* Расположение под иконкой */
+    left: 50%; /* Центрирование относительно иконки */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #06080a;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal; /* Разрешает переносы строк */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0076E5;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.login-container a {
+    display: block; /* Делаем ссылку блочным элементом, чтобы она занимала всю ширину родительского контейнера */
+    text-align: center; /* Выравниваем текст по центру */
+}
+.contact p {
+    position: absolute; 
+    width: 150px;
+    height: 40px;
+    left: 1100px; /* Отступ слева */
+    top: 928px; /* Отступ сверху */
+    color: rgb(240, 240, 240);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .contact p {
+        position: absolute; /* Используем абсолютное позиционирование */
+        width: 150px;
+        height: 40px;
+        left: 200px; /* Отступ слева */
+        top: 1228px; /* Отступ сверху */
+        color: rgb(240, 240, 240);
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
+.contact2 p {
+    position: absolute; 
+    width: 531px;
+    height: 80px;
+    left: 1100px; /* Отступ слева */
+    top: 989px; /* Отступ сверху */
+    color: rgb(240, 240, 240);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+@media (max-width: 1200px) {
+    .contact2 p {
+        position: absolute; /* Используем абсолютное позиционирование */
+        width: 531px;
+        height: 80px;
+        left: 200px; /* Отступ слева */
+        top: 1289px; /* Отступ сверху */
+        color: rgb(240, 240, 240);
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+}
+.logo-copirait {
+    position: absolute; /* Используем абсолютное позиционирование */
+    width: 35px;
+    height: 34.11px;
+    left: 1050px;
+    top: 1025px;
+    background: url('../img/image 26.png') no-repeat;
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .logo-copirait {
+        position: absolute; /* Используем абсолютное позиционирование */
+        width: 35px;
+        height: 34.11px;
+        left: 150px;
+        top: 1325px;
+        background: url('../img/image 26.png') no-repeat;
+        background-size: cover;
+    }
+}
+.logo-pocta {
+    position: absolute; /* Используем абсолютное позиционирование */
+    width: 35px;
+    height: 31.11px;
+    left: 1050px;
+    top: 950px;
+
+    background: url('../img/image 25.png') no-repeat;
+    background-size: cover;
+}
+@media (max-width: 1200px) {
+    .logo-pocta {
+        position: absolute; /* Используем абсолютное позиционирование */
+        width: 35px;
+        height: 31.11px;
+        left: 150px;
+        top: 1250px;
+    
+        background: url('../img/image 25.png') no-repeat;
+        background-size: cover;
+    }
+}
+
+.info-icon {
+    position: fixed;
+    right: 100px;
+    top: 305px;
+    transform: translateY(-17px);
+    width: 40px;
+    height: 40px;
+    background: url('../img/information.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .info-icon {
+        position: fixed;
+        right: 100px;
+        top: 365px;
+        transform: translateY(-17px);
+        width: 40px;
+        height: 40px;
+        background: url('../img/information.png') no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+}
+.info-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(23% + 5px);
+    left: 80%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Montserrat;
+}
+
+.fadeout {
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(0);
+}
+
+.fadeout.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
